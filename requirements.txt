@@ -1,7 +1,7 @@
 pandas
 numpy
 matplotlib
-scikitlearn
+scikit-learn
 tensorflow
 gradio
 seaborn
