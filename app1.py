@@ -6,8 +6,8 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.metrics import MeanAbsoluteError
 from tensorflow.keras.losses import MeanSquaredError
 
-model = load_model("stock_model.h5", custom_objects={'mae': MeanAbsoluteError(), 'mse': MeanSquaredError()})
-scaler = joblib.load("scaler.pkl")
+model = load_model("stock_model1.h5", custom_objects={'mae': MeanAbsoluteError(), 'mse': MeanSquaredError()})
+scaler = joblib.load("scaler1.pkl")
 
 
 FEATURES = ['open', 'high', 'low', 'close', 'volume', 'MA5', 'MA10', 'MA20']
@@ -21,7 +21,7 @@ def predict_next_day(open_price, high_price, low_price, close_price, volume, ma5
 
     scaled_input = scaler.transform(dummy_df)
 
-
+   
     reshaped_input = scaled_input.reshape(1, 1, len(FEATURES))
 
     scaled_prediction = model.predict(reshaped_input)[0][0]
