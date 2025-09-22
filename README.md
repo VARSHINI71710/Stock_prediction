@@ -1,6 +1,6 @@
 📊 Stock Price Prediction using LSTM & Gradio
 
-Live Demo: Stock Prediction Gradio App
+Live Demo: https://huggingface.co/spaces/Varshini-07/Stock_Close_prediction
 
 📌 Overview
 
